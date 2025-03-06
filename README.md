@@ -1,6 +1,6 @@
-    # TooGoodToGo-
-    <!DOCTYPE html>
-    <html lang="fr">
+# TooGoodToGo-
+<!DOCTYPE html>
+<html lang="fr">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
             background-color: #f7f7f7;
         }
 
-        .slider-container {
+.slider-container {
             width: 300px;
             height: 60px;
             background: white;
@@ -30,7 +30,7 @@
             color: black;
         }
 
-        .slider-button {
+.slider-button {
             width: 60px;
             height: 60px;
             background: teal;
@@ -44,11 +44,11 @@
             transition: left 0.2s ease;
         }
 
-        .slider-button:active {
+.slider-button:active {
             cursor: grabbing;
         }
 
-        .arrow {
+.arrow {
             color: white;
             font-size: 24px;
         }
@@ -56,14 +56,14 @@
     </head>
     <body>
 
-    <div class="slider-container" id="sliderContainer">
+<div class="slider-container" id="sliderContainer">
         Valider pour collecter
         <div class="slider-button" id="sliderButton">
             <span class="arrow">➡️</span>
         </div>
     </div>
 
-    <script>
+<script>
         const sliderButton = document.getElementById("sliderButton");
         const sliderContainer = document.getElementById("sliderContainer");
         let isDragging = false;
@@ -101,7 +101,7 @@
                 sliderButton.style.left = "0px";
             }
         }
-    </script>
+</script>
 
-    </body>
-    </html>
+</body>
+</html>
