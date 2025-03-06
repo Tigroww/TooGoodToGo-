@@ -1,7 +1,7 @@
-# TooGoodToGo-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+    # TooGoodToGo-
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slide Button</title>
@@ -53,8 +53,8 @@
             font-size: 24px;
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
 
     <div class="slider-container" id="sliderContainer">
         Valider pour collecter
@@ -103,5 +103,5 @@
         }
     </script>
 
-</body>
-</html>
+    </body>
+    </html>
