@@ -1,107 +1,19 @@
-# TooGoodToGo-
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide Button</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f7f7f7;
-        }
-
-.slider-container {
-            width: 300px;
-            height: 60px;
-            background: white;
-            border-radius: 30px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: black;
-        }
-
-.slider-button {
-            width: 60px;
-            height: 60px;
-            background: teal;
-            border-radius: 50%;
-            position: absolute;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: grab;
-            transition: left 0.2s ease;
-        }
-
-.slider-button:active {
-            cursor: grabbing;
-        }
-
-.arrow {
-            color: white;
-            font-size: 24px;
-        }
-    </style>
-    </head>
-    <body>
-
-<div class="slider-container" id="sliderContainer">
-        Valider pour collecter
-        <div class="slider-button" id="sliderButton">
-            <span class="arrow">➡️</span>
-        </div>
-    </div>
-
-<script>
-        const sliderButton = document.getElementById("sliderButton");
-        const sliderContainer = document.getElementById("sliderContainer");
-        let isDragging = false;
-
-        sliderButton.addEventListener("mousedown", (e) => {
-            isDragging = true;
-            document.addEventListener("mousemove", onMouseMove);
-            document.addEventListener("mouseup", onMouseUp);
-        });
-
-        function onMouseMove(e) {
-            if (!isDragging) return;
-            
-            let containerRect = sliderContainer.getBoundingClientRect();
-            let buttonRect = sliderButton.getBoundingClientRect();
-            let offsetX = e.clientX - containerRect.left - (buttonRect.width / 2);
-
-            if (offsetX < 0) offsetX = 0;
-            if (offsetX > containerRect.width - buttonRect.width) offsetX = containerRect.width - buttonRect.width;
-
-            sliderButton.style.left = offsetX + "px";
-
-            if (offsetX >= containerRect.width - buttonRect.width) {
-                sliderContainer.innerText = "Collecté !";
-                sliderButton.style.display = "none";
-            }
-        }
-
-        function onMouseUp() {
-            isDragging = false;
-            document.removeEventListener("mousemove", onMouseMove);
-            document.removeEventListener("mouseup", onMouseUp);
-            
-            if (sliderButton.style.left !== "240px") { // Si pas validé, retour à 0
-                sliderButton.style.left = "0px";
-            }
-        }
-</script>
-
-</body>
-</html>
+<p>&nbsp;</p>
+<p>Commande &agrave; r&eacute;cup&eacute;rer</p>
+<div class="container">
+<div class="header">Votre commande</div>
+<div class="store">
+<h2>DIAGONAL - Vaujours, G&eacute;n&eacute;ral de Gaulle</h2>
+<p>2 bis Av. du G&eacute;n&eacute;ral de Gaulle, 93410 Vaujours, France</p>
+</div>
+<div class="order">
+<h3>Commande &agrave; r&eacute;cup&eacute;rer</h3>
+<p><strong>1x</strong> Panier Mixte</p>
+<div class="code">C86RAVVCN6HK0</div>
+</div>
+<p style="font-size: 12px; color: gray; margin-top: 10px;">Faites glisser pour confirmer la commande.</p>
+<div id="slider" class="slider-container">
+<div id="sliderText" class="slider-text">Glisser pour valider</div>
+<div id="sliderBtn" class="slider-btn">&nbsp;</div>
+</div>
+</div>
