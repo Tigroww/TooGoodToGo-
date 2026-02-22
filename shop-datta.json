@@ -1,0 +1,19 @@
+{
+  "store": {
+    "name": "Le P'tit Mitron",
+    "address": "144 Rue Saint-Denis, 93100 Montreuil, France",
+    "addressShort": "144 Rue Saint-Denis, 93100 Montreuil, Fr...",
+    "logoText": "Le P'tit<br>Mitron"
+  },
+  "order": {
+    "date": "21 févr. 2026",
+    "collectTime": "19:00 - 21:00",
+    "code": "CYEPD376HE060",
+    "itemName": "1x Panier boulangerie",
+    "itemPrice": "2,49 €",
+    "quantity": "1x",
+    "itemType": "Panier boulangerie",
+    "paymentMethod": "Credit Card: Mastercard",
+    "packagingText": "Le commerçant fournira l'emballage..."
+  }
+}
